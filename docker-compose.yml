@@ -1,0 +1,9 @@
+version: '2'
+services:
+  shell:
+    image: shell
+    container_name: shell
+    volumes:
+      - $PWD/localusers:/localusers
+    stdin_open: true 
+    tty: true        
