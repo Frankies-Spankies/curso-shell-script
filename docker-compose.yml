@@ -1,9 +1,9 @@
 version: '2'
 services:
   shell:
-    image: shell
+    image: centos:7
     container_name: shell
     volumes:
       - $PWD/localusers:/localusers
     stdin_open: true 
-    tty: true        
+    tty: true
