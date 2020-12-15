@@ -1,10 +1,22 @@
 #!/bin/bash
-USER_NAME=$(id -un)
+#Numero aleatorio  entre 0 - 32767
+PASSWORD="${RANDOM}"
+echo "${PASSWORD}"
 
-echo "Your user id is ${UID}"
+#Ocupando segundos
+PASSWORD=$(date +%s)
+echo "${PASSWORD}"
 
-echo "Your username is ${USER_NAME}"
+#Ocupando nanosegundos
+PASSWORD=$(date +%s%N)
+echo "${PASSWORD}"
 
-if [[ ${USER_NAME} -eq 0 ]]
-    then echo "Eres root"
-fi
+
+#Ocupando sha256sum
+PASSWORD=$(date +%s | sha256sum | head -c32)
+echo "${PASSWORD}"
+
+#Agregando un carcter especial
+SPECIAL_CHAR=$(echo "$%&/(^[)%*+-¿!" | fold -w1 | shuf | head -c1)
+PASSWORD=$(date +%s | sha256sum | head -c32)
+echo "${PASSWORD}${SPECIAL_CHAR}"

@@ -5,6 +5,7 @@ services:
     container_name: shell
     volumes:
       - $PWD/localusers:/localusers
+      - $PWD/s3-basic:/s3-basic
       - $PWD/s4-basic:/s4-basic
     stdin_open: true 
     tty: true
