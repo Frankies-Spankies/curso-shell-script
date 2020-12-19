@@ -7,5 +7,6 @@ services:
       - $PWD/localusers:/localusers
       - $PWD/s3-basic:/s3-basic
       - $PWD/s4-basic:/s4-basic
+      - $PWD/s5-IO:/s5-IO
     stdin_open: true 
     tty: true
